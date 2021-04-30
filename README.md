@@ -8,3 +8,5 @@
 This is a sample screenshot:
 
 <img src="media/1.jpg" width="100%">
+
+The rest of the application's screens are under the "media" directory.
