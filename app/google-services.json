@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "488506163448",
+    "firebase_url": "https://inovision-fff50.firebaseio.com",
+    "project_id": "inovision-fff50",
+    "storage_bucket": "inovision-fff50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488506163448:android:717d33086c1158b046bb0d",
+        "android_client_info": {
+          "package_name": "capstone.inovision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488506163448-r0s77d5a4jhljndulnouuqbhtqkh65l0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "capstone.inovision",
+            "certificate_hash": "6f3515871621e7486b2c75139d32d864ffd417ce"
+          }
+        },
+        {
+          "client_id": "488506163448-ff28neqa9fplnd6a14tqtmuuh5s53hfu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9fYfPSBFlhOJHZnxGhKdcZ4Wd-nbOv24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488506163448-ff28neqa9fplnd6a14tqtmuuh5s53hfu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

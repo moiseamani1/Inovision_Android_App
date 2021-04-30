@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ViewContactScreen">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_view_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_left"
+        app:title="Joseph" />
+
+
+    <ScrollView
+        android:id="@+id/view_contact_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_view_contact"
+        tools:context=".ui.ViewContactScreen">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/no_activity_door_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="No activity yet"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/saved_photos_txt"
+                app:layout_constraintStart_toStartOf="@+id/txt_log"
+                app:layout_constraintTop_toBottomOf="@+id/txt_log" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_contact_img_card"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/view_contact_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/view_contact_img_card"
+                app:layout_constraintStart_toStartOf="@+id/view_contact_img_card"
+                app:layout_constraintTop_toBottomOf="@+id/view_contact_img_card">
+
+                <ImageView
+                    android:id="@+id/update_view_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_edit_pen" />
+
+                <ImageView
+                    android:id="@+id/delete_view_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    app:srcCompat="@drawable/ic_delete_24dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_slab"
+                android:text="Activity Log"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contacts_activity"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="24dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/saved_photos_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_log">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/minimized_activity_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/platinum"
+                    tools:listitem="@layout/minimized_door_activity_item" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/saved_photos_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/roboto_slab"
+                android:text="Saved Photos"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txt_log"
+                app:layout_constraintTop_toBottomOf="@+id/contacts_activity" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/saved_photos_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="@color/platinum"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/saved_photos_txt">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/saved_photo_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/photo_item" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/lyt_view_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/saved_photos_card"
+                app:layout_constraintTop_toBottomOf="@+id/saved_photos_card">
+
+                <TextView
+                    android:id="@+id/txt_view_photos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View all"
+                    android:textColor="@color/orangeWeb"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/view_photos_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_right_proceed_arrow" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

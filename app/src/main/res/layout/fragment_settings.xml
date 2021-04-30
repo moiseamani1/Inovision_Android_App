@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.drawer.settings.SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/phone_number_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="not provided"
+            android:textColor="@color/black"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <ImageView
+            android:id="@+id/update_phone_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="@+id/txt_messages_card"
+            app:layout_constraintTop_toTopOf="@+id/textView6"
+            app:srcCompat="@drawable/ic_edit_pen" />
+
+        <ImageView
+            android:id="@+id/update_profile_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_label"
+            app:layout_constraintEnd_toEndOf="@+id/update_phone_icon"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/profile_label"
+            app:layout_constraintTop_toTopOf="@+id/profile_label"
+            app:srcCompat="@drawable/ic_edit_pen" />
+
+        <TextView
+            android:id="@+id/profile_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto_slab"
+            android:text="Profile"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Jonathan"
+            android:textColor="@color/black"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/profile_label"
+            app:layout_constraintTop_toBottomOf="@+id/profile_label" />
+
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansitalic"
+            android:text="jo@hotmail.com"
+            app:layout_constraintStart_toStartOf="@+id/profile_name"
+            app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+
+        <TextView
+            android:id="@+id/notification_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/roboto_slab"
+            android:text="Notification"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/pi_label"
+            app:layout_constraintTop_toBottomOf="@+id/pi_label" />
+
+        <TextView
+            android:id="@+id/notification_info_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansregular"
+            android:text="This feature cannot be disabled as we try to provide quality service."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/push_notifications_card"
+            app:layout_constraintTop_toBottomOf="@+id/push_notifications_card" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/txt_messages_card"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@color/platinum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/notification_label"
+            app:layout_constraintTop_toBottomOf="@+id/notification_label">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_text_messages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:text="Text Messages"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/textMessagesSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="8dp"
+                android:checked="true"
+                android:theme="@style/SCBSwitch" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/push_notifications_card"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/platinum"
+            app:layout_constraintEnd_toEndOf="@+id/txt_messages_card"
+            app:layout_constraintStart_toStartOf="@+id/txt_messages_card"
+            app:layout_constraintTop_toBottomOf="@+id/txt_messages_card">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_push_notifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:text="Push Notifications"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/pushNotificationsSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="8dp"
+                android:checked="true"
+                android:enabled="false"
+                android:theme="@style/SCBSwitch" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/privacy_card"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/platinum"
+            app:layout_constraintEnd_toEndOf="@+id/memory_card"
+            app:layout_constraintStart_toStartOf="@+id/memory_label2"
+            app:layout_constraintTop_toBottomOf="@+id/terms_card">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/privacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:text="Privacy Policy"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/arrow_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:src="@drawable/ic_right_proceed_arrow" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/terms_card"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/platinum"
+            app:layout_constraintEnd_toEndOf="@+id/memory_card"
+            app:layout_constraintStart_toStartOf="@+id/memory_label2"
+            app:layout_constraintTop_toBottomOf="@+id/memory_label2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:text="Terms &amp; Conditions"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/arrow_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:src="@drawable/ic_right_proceed_arrow" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/logout_card"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/privacy_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_orangie">
+
+                <TextView
+                    android:id="@+id/logout_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensanslight"
+                    android:text="Logout"
+                    android:textColor="@color/orangeWeb"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/audio_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto_slab"
+            android:text="Audio"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/notification_info_txt"
+            app:layout_constraintTop_toBottomOf="@+id/notification_info_txt" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/speaker_announcement"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/platinum"
+            app:layout_constraintEnd_toEndOf="@+id/push_notifications_card"
+            app:layout_constraintStart_toStartOf="@+id/audio_label"
+            app:layout_constraintTop_toBottomOf="@+id/audio_label">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_speaker_announcement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:text="Speaker Announcement"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/switchSpeaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="8dp"
+                android:checked="true"
+                android:theme="@style/SCBSwitch" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/security_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto_slab"
+            android:text="Security"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/notification_info_txt"
+            app:layout_constraintTop_toBottomOf="@+id/speaker_announcement" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/memory_card"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/platinum"
+            app:layout_constraintEnd_toEndOf="@+id/speaker_announcement"
+            app:layout_constraintStart_toStartOf="@+id/security_label"
+            app:layout_constraintTop_toBottomOf="@+id/security_label">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_armed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:text="Armed"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/switchArmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="8dp"
+                android:checked="true"
+                android:theme="@style/SCBSwitch" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/update_pi_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/pi_label"
+            app:layout_constraintEnd_toEndOf="@+id/update_phone_icon"
+            app:layout_constraintTop_toTopOf="@+id/pi_label"
+            app:srcCompat="@drawable/ic_edit_pen" />
+
+        <TextView
+            android:id="@+id/pi_id_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="not provided"
+            android:textColor="@color/black"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/pi_label"
+            app:layout_constraintTop_toBottomOf="@+id/pi_label" />
+
+        <TextView
+            android:id="@+id/pi_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/roboto_slab"
+            android:text="Pi Id"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_slab"
+            android:text="Phone"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/profile_label"
+            app:layout_constraintTop_toBottomOf="@+id/profile_email" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/memory_label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto_slab"
+            android:text="Legal"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/memory_card"
+            app:layout_constraintTop_toBottomOf="@+id/memory_card" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

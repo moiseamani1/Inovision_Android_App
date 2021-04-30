@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+<!--    <style name="Theme.Inovision" parent="Theme.MaterialComponents.DayNight.DarkActionBar">-->
+    <style name="Theme.Inovision" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!--
+        <!- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+
+
+<!--        <style name="AppTheme.ToolbarFont" parent="AppTheme">-->
+<!--            &lt;!&ndash;This line changes the color of text in Toolbar&ndash;&gt;-->
+<!--            <item name="fontFamily">@font/opensansregular</item>-->
+<!--            <item name="textColor">@color/white</item>-->
+<!--        </style>-->
+
+<!--        <style name="SCBSwitch" parent="Theme.AppCompat.Light">-->
+<!--            &lt;!&ndash; active thumb & track color (30% transparency) &ndash;&gt;-->
+<!--            <item name="colorControlActivated">@color/orangeWeb</item>-->
+<!--            &lt;!&ndash; inactive thumb color &ndash;&gt;-->
+<!--            <item name="colorSwitchThumbNormal">#f1f1f1-->
+<!--            </item>-->
+<!--            &lt;!&ndash; inactive track color (30% transparency) &ndash;&gt;-->
+<!--            <item name="android:colorForeground">#42221f1f-->
+<!--            </item>-->
+<!--        </style>-->
+
+    </style>
+</resources>

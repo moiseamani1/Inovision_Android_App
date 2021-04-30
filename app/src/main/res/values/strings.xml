@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Inovision</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Inovision</string>
+    <string name="menu_gallery">Contacts</string>
+    <string name="menu_slideshow">Settings</string>
+
+    <string name="facebook_application_id" translatable="false">707411823488191</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">707411823488191</string>
+    <!--    <string name="default_web_client_id" >488506163448-ff28neqa9fplnd6a14tqtmuuh5s53hfu.apps.googleusercontent.com</string>-->
+
+    <string name="terms_conditions"><a href="https://docs.google.com/document/d/1T-ecHyw_14O1ALVmGF1119P-0WCc1g9fTAmnTQafgTg/edit?usp=sharing"><u>Terms and Conditions</u>.</a></string>
+    <string name="repeated_account">An account already exists with the same email address but different sign-in credentials. Sign in using a provider associated with this email address.</string>
+    <string-array name="category_values">
+        <item>Select Category</item>
+        <item>Window</item>
+        <item>Garage</item>
+        <item>Carbon Monoxide</item>
+    </string-array>
+</resources>

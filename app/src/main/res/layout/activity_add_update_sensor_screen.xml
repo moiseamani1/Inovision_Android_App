@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddUpdateSensorScreen">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/add_update_sensor_Button"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="#FCA311"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="6dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout_add_update_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/add_update_sensor_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/opensanslight"
+                android:text="Update Sensor"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/location_info_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansregular"
+        android:text="Specify where the sensor is located in your home e.g Main room, bedroom, living room, bathroom, etc..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/location_add_update_sensor"
+        app:layout_constraintTop_toBottomOf="@+id/location_add_update_sensor" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/location_add_update_sensor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:textColorHint="@color/orangeWeb"
+        app:endIconDrawable="@drawable/ic_username"
+        app:hintTextColor="@color/orangeWeb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_spinner">
+
+        <EditText
+            android:id="@+id/edt_location_add_update_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableEnd="@drawable/ic_location"
+            android:ems="10"
+            android:fontFamily="@font/opensansregular"
+            android:hint="Location"
+            android:inputType="phone"
+            android:textColor="@color/black"
+            android:textColorHint="@color/orangeWeb"
+            android:theme="@style/MyEditTextTheme" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_add_update_sensor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_left"
+        app:title="Update Sensor" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/label_add_update_sensor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:textColorHint="@color/orangeWeb"
+        app:endIconDrawable="@drawable/ic_username"
+        app:hintTextColor="@color/orangeWeb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_add_update_sensor">
+
+        <EditText
+            android:id="@+id/edt_label_add_update_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableEnd="@drawable/ic_price_tag"
+            android:ems="10"
+            android:fontFamily="@font/opensansregular"
+            android:hint="Label"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/orangeWeb"
+            android:theme="@style/MyEditTextTheme" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/category_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/category_values"
+        app:layout_constraintStart_toEndOf="@+id/category_txt"
+        app:layout_constraintTop_toBottomOf="@+id/label_add_update_sensor" />
+
+    <TextView
+        android:id="@+id/category_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Category:"
+        android:textColor="@color/orangeWeb"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/category_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/category_spinner" />
+</androidx.constraintlayout.widget.ConstraintLayout>
