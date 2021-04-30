@@ -5,6 +5,6 @@
 * Firebase used for Email/Password, Facebook and Google Authentication
 * Implementation of client side indexing for the sorting and filtering of Facial Rec data and Sensor activity 
 
-
+This is a sample screenshot:
 
 <img src="media/1.jpg" width="100%">
